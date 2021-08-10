@@ -9,7 +9,7 @@ server:
   config:
     repositories: |
       - type: git
-        url: https://github.com/IuryAlves/single-parent-argocd.git
+        url: https://github.com/IuryAlves/auto-argocd.git
       - name: argo-helm
         type: helm
         url: https://argoproj.github.io/argo-helm
@@ -27,7 +27,7 @@ server:
           - values.yaml
           - ../values-override.yaml
         path: argocd/argo-cd
-        repoURL: https://github.com/IuryAlves/single-parent-argocd.git
+        repoURL: https://github.com/IuryAlves/auto-argocd.git
         targetRevision: HEAD
       syncPolicy:
         syncOptions:
@@ -40,7 +40,7 @@ server:
       project: argocd
       source:
         path: apps
-        repoURL: https://github.com/IuryAlves/single-parent-argocd.git
+        repoURL: https://github.com/IuryAlves/auto-argocd.git
         targetRevision: HEAD
         directory:
           recurse: true
