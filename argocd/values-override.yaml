@@ -26,7 +26,7 @@ server:
           valueFiles:
           - values.yaml
           - ../values-override.yaml
-        path: argo-cd/argo-cd
+        path: argocd/argo-cd
         repoURL: https://github.com/IuryAlves/single-parent-argocd.git
         targetRevision: HEAD
       syncPolicy:
@@ -39,7 +39,7 @@ server:
         server: https://kubernetes.default.svc
       project: argocd
       source:
-        path: argocd-apps
+        path: apps
         repoURL: https://github.com/IuryAlves/single-parent-argocd.git
         targetRevision: HEAD
         directory:
